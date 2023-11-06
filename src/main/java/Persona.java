@@ -39,12 +39,25 @@ public class Persona {
 	public String getRut() {
 		return this.rut;
 	}
-	public List<Correo_Electronico getCorreosElectronicos(){
+	public List<Correo_Electronico> getCorreosElectronicos(){
 		return this.correosElectronicos;
 	}
 	public List<Automovil> getAutomoviles(){
 		return this.automoviles;
 	}
 
-
+	public void agregarAutomovil(Automovil automovil){
+		automoviles.add(automovil);
+	}
+	public void agregarCorreoElectronico(Correo_Electronico correoElectronico){
+		correosElectronicos.add(correoElectronico);
+	}
+	public boolean automovilMarca(String marca) {
+		for (Automovil automovil : automoviles) {
+			if (automovil.getMarca().equals(marca)) {
+				return true;
+			}
+		}
+		return false;
+	}
 }
