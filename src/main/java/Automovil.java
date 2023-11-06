@@ -18,6 +18,12 @@ public class Automovil {
 	public void setPrecio(double precio) {
 		this.precio = precio;
 	}
+	public void setMotor(Motor motor) {
+		this.motor = motor;
+	}
+	public void setChasis(Chasis chasis) {
+		this.chasis = chasis;
+	}
 
 	public String getModelo() {
 		return this.modelo;
@@ -30,6 +36,12 @@ public class Automovil {
 	}
 	public double getPrecio() {
 		return this.precio;
+	}
+	public Motor getMotor() {
+		return motor;
+	}
+	public Chasis getChasis(){
+		return chasis;
 	}
 
 	public Automovil(String marca, String modelo, int añoDeFabricacion, double precio, Motor motor, Chasis chasis) {
